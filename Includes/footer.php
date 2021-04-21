@@ -22,7 +22,7 @@
 
   </div>
 <nav class="footer" >
-    <div class="leftSide">info.mitambi@gmail.com</div>
+    <div class="leftSide">mitambisolutions@gmail.com</div>
     <div class="rightSide">Copyright &copy; 2021 All Rights Reserved.</div>
 
 </nav>

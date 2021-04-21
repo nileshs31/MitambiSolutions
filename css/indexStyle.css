@@ -27,7 +27,7 @@
 }
 
 .TalkExpert {
-  background-image: url("/mitambisolutions/images/banners/codes.png");
+  background-image: url("../images/banners/codes.png");
   background-size: cover;
   max-width: 100%;
   height: auto;
