@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/contactStyle.css" />
+    <link rel="stylesheet" href="css/headerStyle.css" />
+    <link rel="stylesheet" href="css/footerStyle.css" />
     <link rel="icon" href="images/favicon.png" type="image" sizes="256x256" />
     <meta name="Description" content="Contact Us - MitambiSolutions">
     <meta name="Tags" content=",,,,">
@@ -23,7 +25,36 @@
 
   <body>
 
-  <?php include('includes/header.php');?>
+    <div class="head">
+      <nav class="nav collapsible">
+        <div><a href="/mitambisolutions" style="float:left;"><img class = "logo" src="images/logo.png" alt="" ></a>
+        <div class="LogoText"><a href="/mitambisolutions">MitambiSolutions</a></div> 
+        </div>
+        <svg class="icon icon--white navToggler">
+            <use xlink:href="images/sprite.svg#menu"></use>
+          </svg>
+        
+            <ul class="list navList collapsibleContent">
+            <li class="navItem"><a href="ourwork.html">Our Work</a></li>
+            <li class="navItem"><a href="techstack.html">Tech Stack</a></li>
+            <li class="navItem"><a href="team.html">Meet The Team</a></li>
+            <li class="navItem"><a href="careers.html">Careers</a></li>
+            <li class="navItem"><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        
+        </nav>
+        
+        <script>
+            const collapsibles = document.querySelectorAll(".collapsible");
+            collapsibles.forEach((item) =>
+            item.addEventListener("click", function () {
+            this.classList.toggle("collapsibleExpanded");
+          })
+        );
+        </script>
+    
+    
+     </div>
  
   <div class="grid"style="padding: 5rem; padding-top:1rem; padding-bottom: 1rem;">
   <h2>Contact Us And Talk with an Expert Right Now!</h2>
@@ -64,10 +95,34 @@
   </div>
   
 
+  <div class="Foot">
+    <div class="grid"style=" background: #dadae0 ;padding: 7rem;">
+      <div class="grid2"style="text-align: center;">
+        <div><h3>Follow us on: </h3>
+          <p><a href="https://www.facebook.com/Mitambi-Solutions-101026408803885"><img src="images/fb.png" alt=""style=" width:40px"></a>        
+            &emsp;&emsp;<a href="https://www.instagram.com/mitambi.solutions/"><img src="images/ins.png" alt=""style=" width:40px"></a>
+          </p>
+        </div>
+  
+        <div><h3>Quick Contacts: </h3>
+          <p><a href="https://wa.me/8979964604"><img src="images/wa.png" alt=""style=" width:40px"></a>
+            &emsp;&emsp;<a href="https://join.skype.com/invite/zqy7FX8nbiho"><img src="images/sk.png" alt=""style=" width:40px"></a>
+            
+          </p>
+        </div>
+  
+      </div>
+  
+    </div>
+  <nav class="footer" >
+      <div class="leftSide">info@mitambisolutions.com</div>
+      <div class="rightSide">Copyright &copy; 2021 All Rights Reserved.</div>
+  
+  </nav>
 
+  </div>
 
-
-  <div><?php include('includes/footer.php');?></div>
+  
   </body>
 
 
