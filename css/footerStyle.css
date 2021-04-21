@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+}
+.footer {
+  padding-left: 15px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+}
+.leftSide {
+  display: inline;
+}
+.rightSide {
+  float: right;
+  padding-right: 25px;
+}

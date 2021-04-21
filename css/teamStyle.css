@@ -1,0 +1,5 @@
+.grid > .ourDetails {
+  grid-gap: 8rem;
+  padding: 2rem;
+  grid-auto-rows: minmax(400px, auto);
+}
