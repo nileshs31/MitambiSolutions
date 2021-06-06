@@ -1,0 +1,14 @@
+.formCont {
+  max-width: 100%;
+  padding-left: 0rem;
+}
+
+.formLink {
+}
+
+@media screen and (min-width: 768px) {
+  .formCont {
+    max-width: 35%;
+    padding-left: 2rem;
+  }
+}
