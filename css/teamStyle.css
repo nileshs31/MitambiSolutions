@@ -9,7 +9,7 @@
 .cardImg {
   width: 100%;
   padding: 0px;
-  padding-top: 30px;
+  padding-top: 20px;
   background-size: cover;
 }
 
@@ -18,7 +18,7 @@
     grid-gap: 3rem;
     padding-left: 10rem;
     padding-right: 10rem;
-    grid-auto-rows: minmax(300px, auto);
+    grid-auto-rows: minmax(200px, auto);
   }
   .cardDet {
     grid-template-columns: 50% 50%;
@@ -28,7 +28,7 @@
   .cardImg {
     width: 100%;
     padding: 0px;
-    padding-top: 30px;
+    padding-top: 20px;
     background-size: cover;
   }
 }

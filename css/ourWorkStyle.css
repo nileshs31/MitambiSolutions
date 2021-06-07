@@ -13,10 +13,24 @@ a:hover {
 .ourWork > .grid3 {
   grid-gap: 10rem;
   padding: 2rem;
-  grid-auto-rows: minmax(200px, auto);
+  grid-auto-rows: minmax(150px, auto);
 }
 .grid4 {
   background: #dadae0;
   grid-gap: 0rem;
   padding: 0rem;
+}
+.card {
+}
+
+.grid.ourWork {
+  padding: 1.2rem;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid.ourWork {
+    padding: 2rem;
+    padding-top: 1rem;
+  }
 }

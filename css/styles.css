@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif, Arial, Helvetica;
-  font-size: 2.4rem;
+  font-size: 2.15rem;
   line-height: 1.5;
   background-color: var(--color_bg);
   color: var(--color-body);
@@ -42,15 +42,15 @@ h3 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 p {
@@ -59,17 +59,17 @@ p {
 
 @media screen and (min-width: 1024px) {
   body {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   h1 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
   h2 {
     font-size: 4rem;
   }
   h3 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -119,6 +119,7 @@ p {
 .grid3,
 .grid4,
 .grid5,
+.grid10,
 .grid7030 {
   display: grid;
   grid-auto-rows: minmax(100px, auto);
@@ -126,7 +127,8 @@ p {
   padding: 0.3rem;
 }
 .grid4,
-.grid5 {
+.grid5,
+.grid10 {
   text-align: center;
   grid-template-columns: repeat(1, 1fr);
 }
@@ -154,6 +156,9 @@ p {
   }
   .grid5 {
     grid-template-columns: repeat(5, 1fr);
+  }
+  .grid10 {
+    grid-template-columns: repeat(10, 1fr);
   }
 }
 

@@ -24,9 +24,9 @@ a:hover {
   padding-top: 1rem;
 }
 
-.grid5 {
+.grid10 {
   grid-gap: 2rem;
-  padding: 1rem;
+  padding-left: 4rem;
 }
 
 .grid {

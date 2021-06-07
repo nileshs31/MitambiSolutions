@@ -105,15 +105,14 @@ body > .head {
     border: 0;
   }
   .logo {
-    width: 85px;
+    width: 60px;
     padding-left: 1rem;
   }
 
   .LogoText {
     padding: 0;
-    padding-top: 0.5rem;
   }
   .LogoText > a {
-    font-size: 5.8rem;
+    font-size: 5rem;
   }
 }
