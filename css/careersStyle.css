@@ -7,7 +7,7 @@
 @media screen and (min-width: 1300px) {
   .formCont {
     max-width: 100%;
-    margin-left: -50px;
+    margin-left: -30px;
     padding-top: 5rem;
   }
 }
@@ -15,6 +15,6 @@
 @media screen and (min-width: 1500px) {
   .formCont {
     max-width: 100%;
-    margin-left: -80px;
+    margin-left: -60px;
   }
 }
