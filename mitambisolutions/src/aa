@@ -1,0 +1,61 @@
+import { QuerySnapshot } from '@firebase/firestore'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import firebase from './firebase'
+
+function getHeaderItems() {
+    ref.onSnapshot((querySnapshot) => {
+        const hItems = {};
+        querySnapshot.forEach((doc) => {
+            hItems.push(doc.data());
+        });
+
+    });
+}
+
+const Header = () => {
+    const ref = firebase.firestore().collection("headerItems");
+    return (
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ 'padding': '2px 0px' }}>
+                <div className="container-fluid">
+                    <NavLink exact activeClassName="active" className="navbar-brand headerItems" to="/">
+                        <img src="images/logo.png" alt="" width="45" height="45" className="" /></NavLink>
+                    <NavLink exact activeClassName="active" className="navbar-brand headerItems" to="/">
+                        Mitambi Solutions</NavLink>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul className="navbar-nav justify-content-end">
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems" aria-current="page" to="/ourwork">Our Work</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems" to="/techstack">Tech Stack</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems" to="/mitambicares">Mitambi Cares</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems" to="/mightyhardstudios">Mighty Hard Studios</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems disabled" to="/team">Meet the Team</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems" to="/careers">Careers</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink exact activeClassName="active" className="nav-link headerItems" to="/contactus">Contact Us</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div >
+    )
+}
+
+export default Header

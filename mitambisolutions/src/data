@@ -1,0 +1,9 @@
+{    'id': 2,
+    'Title': "Blinking Light Detection using Darknet YOLO"
+    'isLatest': true
+    'Description':
+            "This project involves the detection of blinking lights on any particular product to provide better and easier support. A darknet YOLO model is trained to detect lights on a particular product, which can be a router, printer, etc"}
+
+npm install @babel/helper-compilation-targets --save-dev
+
+npm install @babel
