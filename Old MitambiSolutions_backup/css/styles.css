@@ -1,0 +1,174 @@
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #6d6883;
+  --color_bg: aliceblue;
+}
+html {
+  /* 62.5% of 16 = 10px  and and and 16px is default for browsers*/
+  font-size: 58.5%;
+}
+.links {
+  text-decoration: none;
+  color: var(--color-accent);
+  position: relative;
+}
+
+body {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-size: 2.15rem;
+  line-height: 1.5;
+  background-color: var(--color_bg);
+  color: var(--color-body);
+}
+
+.btn {
+  font-size: 2.5rem;
+  text-decoration: none;
+  line-height: 1.5;
+  background-color: var(--color-accent);
+  color: var(--color_bg);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.7rem;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
+}
+
+/*    GRIDSSSS    */
+
+.grid1,
+.grid2,
+.grid3,
+.grid4,
+.grid5,
+.grid10,
+.grid7030 {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 0.5rem;
+  padding: 0.3rem;
+}
+.grid4,
+.grid5,
+.grid10 {
+  text-align: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid5,
+  .grid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid7030 {
+    grid-template-columns: 70% 30%;
+    padding-right: 0.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .grid10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+/* cards */
+
+.card {
+  background-color: #ecedf0;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px black;
+}
+.card * {
+  padding: 5px 25px;
+}

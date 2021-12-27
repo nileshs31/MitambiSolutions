@@ -1,0 +1,60 @@
+.midContent {
+  padding: 1.2rem;
+  background-color: black;
+}
+.bannerHeading {
+  color: #e2dfec;
+  text-align: center;
+  font-size: 4rem;
+}
+.bannerSkew {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+.bannerRightSide {
+  padding-top: 1rem;
+  background: black;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.whatWeDo {
+  padding: 3rem;
+}
+.LatestWork {
+  padding: 1.2rem;
+}
+
+@media screen and (min-width: 1340px) {
+  .bannerRightSide {
+    padding-top: 10rem;
+    background: black;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .LatestWork,
+  .whatWeDo {
+    padding: 5rem;
+  }
+}
+
+.TalkExpert {
+  background-image: url("../images/banners/codes.png");
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.TalkExpert > h3 {
+  color: #ffffff;
+  padding-bottom: 0.5rem;
+  text-shadow: 1px 1px 0px #000000;
+  font-size: 5rem;
+}
+
+.LatestWork > .grid3 {
+  grid-gap: 10rem;
+  padding: 2rem;
+  grid-auto-rows: minmax(200px, auto);
+}

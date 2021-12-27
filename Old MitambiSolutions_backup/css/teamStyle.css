@@ -1,0 +1,34 @@
+.grid > .ourDetails {
+  grid-gap: 1rem;
+  padding: 1em;
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.cardDet {
+}
+.cardImg {
+  width: 100%;
+  padding: 0px;
+  padding-top: 20px;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .grid > .ourDetails {
+    grid-gap: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    grid-auto-rows: minmax(200px, auto);
+  }
+  .cardDet {
+    grid-template-columns: 50% 50%;
+    grid-gap: 0rem;
+    padding: 0em;
+  }
+  .cardImg {
+    width: 100%;
+    padding: 0px;
+    padding-top: 20px;
+    background-size: cover;
+  }
+}
