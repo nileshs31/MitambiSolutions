@@ -1,13 +1,16 @@
 import React from 'react'
+import Header from './Header';
+import Footer from './Footer';
 
 const Careers = () => {
     return (
         <div>
-            <div class="grid careersHeading">
+            <Header />
+            <div className="grid careersHeading">
 
                 <h1>Be a Part of our Team!</h1>
                 <p>
-                    We team Mitambi invite you to be a part of a very diverse work culture,
+                    Team Mitambi invites you to be a part of a very diverse work culture,
                     making you future ready to be a problem solver so that one day you can
                     do what is needed. <br />
                     Mitambi’s work culture will not only help you succeed in your work life
@@ -26,6 +29,7 @@ const Careers = () => {
                 <h3></h3>
 
             </div>
+            <Footer/>
         </div>
     )
 }

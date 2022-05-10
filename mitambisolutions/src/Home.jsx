@@ -2,10 +2,23 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import firebase from './firebase'
 
+
+
 import "../src/css/homeStyle.css"
 import Ourworkcards from './Ourworkcards'
 
+import Header from './Header';
+import Footer from './Footer';
+
+
+
+
 const Home = () => {
+
+    document.title = "Mitambi Solutions - Start Growing With Us";
+    document.getElementById("favicon").href = "images/favicon.png";
+
+
     const [ourWorks, setOurWorks] = useState([]);
 
     useEffect(() => {
@@ -22,6 +35,7 @@ const Home = () => {
 
     return (
         <div>
+            <Header />
             <div className="grid2 bannerSkew" style={{ 'grid-gap': '0rem', 'padding': '0rem' }}>
                 <div style={{ 'background': '#212529' }}> <img src="images/banners/code1.png" alt="" style={{ 'width': '100%' }} /></div>
                 <div className="bannerRightSide">
@@ -60,7 +74,7 @@ const Home = () => {
                 </div>
             </div>
 
-
+            <Footer/>
         </div>
     )
 }

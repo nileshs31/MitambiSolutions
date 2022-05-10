@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Ourworkcards from './Ourworkcards'
 import firebase from './firebase'
 
+import Header from './Header';
+import Footer from './Footer';
+
+
 const Ourwork = () => {
 
     const [ourWorks, setOurWorks] = useState([]);
@@ -36,6 +40,7 @@ const Ourwork = () => {
 
     return (
         <div>
+            <Header />
             <h2 style={{ "padding-top": "1.8rem", 'margin': '0', 'textAlign': 'center' }}>Our Work</h2>
             <nav className="navbar">
                 <div className="btn-group btn-grid8">
@@ -53,7 +58,7 @@ const Ourwork = () => {
                 <Ourworkcards ourWorks={ourWorks} />
             </div>
 
-
+            <Footer/>            
         </div>
     )
 }

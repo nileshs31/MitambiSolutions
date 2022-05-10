@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import firebase from './firebase'
+import ScrollToTop from './ScrollToTop';
 
 const Header = () => {
     const [headeritems, setHeaderItems] = useState([]);
@@ -34,10 +35,15 @@ const Header = () => {
                                     <NavLink exact activeClassName="active" className={headerItems.isEnabled ? "nav-link headerItems" : "nav-link headerItems disabled"} aria-current="page" to={headerItems.to}>{headerItems.nameHeader}</NavLink>
                                 </li>
                             ))}
+
+                            <li className="nav-item">
+                                    <NavLink exact activeClassName="active" className="nav-link headerItems" aria-current="page" to="marketing">MarketingTest</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <ScrollToTop/>
 
         </div >
     )

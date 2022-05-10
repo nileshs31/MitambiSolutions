@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import Header from './Header';
+import Footer from './Footer';
 import firebase from './firebase'
 import { Alert } from 'react-bootstrap';
 var Recaptcha = require('react-recaptcha');
+
+
 
 
 
@@ -122,6 +126,7 @@ const Contactus = () => {
     let recaptchaInstance;
     return (
         <div>
+            <Header />
             <div className="contactHead">
                 <h2>Contact Us And Talk with an Expert Right Now!</h2>
                 <p >Talk to an expert and get the best solution for your dream project at your cheapest
@@ -130,9 +135,10 @@ const Contactus = () => {
 
             <div className="contactForm">
                 <h2>Get In Touch!</h2>
-                <p>You can directly send us your queries and an expert will get back to you soon.</p>
+                {/* <p>You can directly send us your queries and an expert will get back to you soon.</p> */}
                 <br />
-                <div className="contactForm2">
+                <>{/* OLD CONTACT US FORM */}
+                {/* <div className="contactForm2">
 
                     <AlertSuccess />
                     <AlertCaptchaError />
@@ -166,10 +172,22 @@ const Contactus = () => {
                     <div className="mb-3">
                         <button onClick={() => { sendProposal({ Name, Email, Phone, Title, Description }); resetRecaptcha() }} className="btn btn-primary">Confirm</button>
                     </div>
-                </div>
+                </div> */}
+                </>
+
+                <div style={{ 'height': '300px' }}>
+                    <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfs41SmHbcP5zSRoIjWWPkQW2ydb9ljutRU2R5M4sHA2itqPA/viewform?embedded=true"
+                    width="100%" height="100%" frameborder="0">Loading…</iframe>
+
+
+
+                <h3></h3>
 
             </div>
 
+            </div>
+            <Footer/>       
         </div >
     )
 }

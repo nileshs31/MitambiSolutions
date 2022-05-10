@@ -42,7 +42,7 @@ const Admin = () => {
     }
 
 
-    function ConfirmButton() {
+    function ConfirmButton(){
         if (pass == passDB[0].password) {
             setCanShow(true);
             document.getElementById("passwordForm").className = "dispNone"
@@ -78,12 +78,17 @@ const Admin = () => {
 
             <AlertError />
             <div id="passwordForm" style={{ 'text-align': 'center', 'margin': '3rem 1rem 25rem 1rem' }}>
+                <form onSubmit={ e=>{
+                    e.preventDefault();
+                    ConfirmButton();
+                } }>
                 <div className="mb-3">
                     <input type="password" className="form-control" id="pass" onChange={event => setPass(event.target.value)} placeholder="Enter Password!" />
                 </div>
                 <div className="mb-3">
-                    <button onClick={() => { ConfirmButton() }} className="btn btn-primary">Confirm</button>
+                    <button type="submit" className="btn btn-primary">Confirm</button>
                 </div>
+                </form>
             </div>
             <ShowAdminPage />
         </div >
@@ -91,3 +96,4 @@ const Admin = () => {
 }
 
 export default Admin
+//onClick={() => { ConfirmButton() }} 
