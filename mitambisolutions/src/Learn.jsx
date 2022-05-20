@@ -23,11 +23,6 @@ const Careers = () => {
                     <iframe 
                     src="https://docs.google.com/forms/d/e/1FAIpQLSdXmjS1KUd6isn6w64Y083cAbGyPP41ZuYf3u3EaV3S0IUpPA/viewform?embedded=true"
                     width="100%" height="100%" frameborder="0">Loading…</iframe>
-
-
-
-                <h3></h3>
-
             </div>
             <Footer/>
         </div>

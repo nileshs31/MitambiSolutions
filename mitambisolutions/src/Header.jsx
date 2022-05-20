@@ -36,9 +36,9 @@ const Header = () => {
                                 </li>
                             ))}
 
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                     <NavLink exact activeClassName="active" className="nav-link headerItems" aria-current="page" to="marketing">MarketingTest</NavLink>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

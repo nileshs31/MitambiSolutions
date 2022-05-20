@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
                 <div className="footer" >
                     <div className="leftSide">info@mitambisolutions.com</div>
-                    <div className="rightSide">Copyright &copy; 2021 All Rights Reserved.</div>
+                    <div className="rightSide">Copyright &copy; 2022 All Rights Reserved.</div>
 
                 </div>
 

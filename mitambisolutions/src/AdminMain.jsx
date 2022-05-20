@@ -23,7 +23,7 @@ const AdminMain = () => {
     const [to, setTo] = useState('');
 
     useEffect(() => {
-        const ref = firebase.firestore().collection("ContactUs");
+        const ref = firebase.firestore().collection("ContactUs").orderBy("DateTime");
         function getProposals() {
             ref.get().then((item) => {
                 const items = item.docs.map((doc) => doc.data());
@@ -32,6 +32,14 @@ const AdminMain = () => {
         }
         getProposals();
     }, []);
+
+    function getProposalsOnClick(){
+        const refe = firebase.firestore().collection("ContactUs").orderBy("DateTime");
+        refe.get().then((item) => {
+            const items = item.docs.map((doc) => doc.data());
+            setProposals(items);
+        });
+    }
 
     const uploadWork = (doc, dbName) => {
         setShowSuccess(false);
@@ -79,6 +87,18 @@ const AdminMain = () => {
         }
         return null;
     }
+
+
+    const deleteProposal = (proposal) => {
+        const ref = firebase.firestore().collection("ContactUs").where("DateTime", "==", proposal.DateTime)
+        .where("Title", "==", proposal.Title)
+        .get().catch((err) => { console.error(err) })
+        .then(querySnapshot => {
+            querySnapshot.docs[0].ref.delete();
+            setTimeout(() => {  getProposalsOnClick() }, 1000);
+        });         
+    };
+
 
     return (
         <div>
@@ -140,17 +160,49 @@ const AdminMain = () => {
             </div>
 
             <div className='grid'>
-                <div style={{ 'padding': '1rem', 'margin': 'auto' }}>
+                <div style={{ 'padding': '1rem', 'margin': 'auto'}}>
                     <h2 style={{ 'text-align': 'center' }}>Proposals:</h2>
-                    <div className='grid2' style={{ 'margin-top': '2rem', 'grid-gap': '0.5rem', 'padding': '0rem' }}>
+                    <div className='grid7' style={{ 'grid-gap': '0px','border': '2px solid #808080','border-bottom': '1px solid #808080', 'margin-top': '2rem','padding': '0rem'}}>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0rem', 'margin': 'auto' }}>Date Time</h4>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0rem', 'margin': 'auto' }}>Project Title</h4>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0rem', 'margin': 'auto' }}>Name         </h4>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0rem', 'margin': 'auto' }}>Phone Num    </h4>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0rem', 'margin': 'auto' }}>Email        </h4>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0rem', 'margin': 'auto' }}>Description  </h4>
+                        <h4 style={{ 'font-weight': 'bold', color: 'black','padding': '0.2rem', 'margin': 'auto' }}>
+                            <div className="mb-3" style={{ 'padding-top': '1rem'}}>
+                                    <button onClick={() => {getProposalsOnClick()}} className="btn btn-primary">Update DB</button>
+                                </div> </h4>
+
+                    </div>
+                    <div className='grid7' style={{ 'border': '1px solid #808080', 'border-top': '1px', 'grid-gap': '0px', 'grid-auto-rows': 'minmax(5px, auto)','color': 'black','padding': '0rem', 'margin': 'auto' }} >
                         {proposals.map((props) => (
-                            <div style={{ 'background-color': 'white', 'margin': 'auto', 'padding': '3rem', 'border-radius': '5%' }}>
-                                <h3><span style={{ 'text-decoration': 'underline', color: 'black' }}>Project Title</span> : {props.Title}</h3>
-                                <h4><span style={{ 'text-decoration': 'underline', color: 'black' }}>Name</span> : {props.Name}</h4>
-                                <h4><span style={{ 'text-decoration': 'underline', color: 'black' }}>Phone Num</span> : {props.Phone}</h4>
-                                <h4><span style={{ 'text-decoration': 'underline', color: 'black' }}>Email</span> : {props.Email}</h4>
-                                <p><span style={{ 'text-decoration': 'underline', color: 'black' }}>Description</span> : <br />{props.Description}</p>
-                            </div>
+                            <>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                   <p>{props.DateTime}</p>
+                                </div>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                   <p>{props.Title}</p>
+                                </div>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                    <p>{props.Name}</p>
+                                </div>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                    <p>{props.Phone}</p>
+                                </div>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                    <p>{props.Email}</p>
+                                </div>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                    <p>{props.Description}</p>
+                                </div>
+                                <div style={{ 'padding': '0.2rem','border': '1px solid #808080'}}>
+                                <div className="mb-3">
+                                    <button onClick={() => {deleteProposal(props)}} className="btn btn-danger">Delete</button>
+                                    <p style={{ 'font-size': '12.5px'}}>(Wait one second for DB to update)</p>
+                                </div>
+                                </div>
+                            </>
                         ))}
                     </div>
                 </div>

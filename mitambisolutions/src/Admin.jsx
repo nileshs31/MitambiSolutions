@@ -3,6 +3,9 @@ import AdminMain from './AdminMain'
 import { Alert } from 'react-bootstrap';
 import firebase from './firebase'
 
+import Header from './Header';
+import Footer from './Footer';
+
 
 
 const Admin = () => {
@@ -75,7 +78,7 @@ const Admin = () => {
 
     return (
         <div>
-
+            <Header />
             <AlertError />
             <div id="passwordForm" style={{ 'text-align': 'center', 'margin': '3rem 1rem 25rem 1rem' }}>
                 <form onSubmit={ e=>{
@@ -91,6 +94,7 @@ const Admin = () => {
                 </form>
             </div>
             <ShowAdminPage />
+            <Footer/>
         </div >
     )
 }

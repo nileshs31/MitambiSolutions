@@ -68,7 +68,7 @@ const Home = () => {
             </div>
 
             <div className="grid LatestWork">
-                <h2 style={{ "padding-bottom": "2rem;" }}>Latest Work</h2>
+                <h2 style={{ "padding-bottom": "2rem;" }}>Our Latest Work</h2>
                 <div className="grid3">
                     <Ourworkcards ourWorks={ourWorks} />
                 </div>

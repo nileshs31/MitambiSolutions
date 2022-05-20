@@ -178,6 +178,8 @@ html > .footer {
 .grid3,
 .grid4,
 .grid5,
+.grid6,
+.grid7,
 .grid10,
 .grid7030 {
   display: grid;
@@ -187,6 +189,8 @@ html > .footer {
 }
 .grid4,
 .grid5,
+.grid6,
+.grid7,
 .grid10 {
   text-align: center;
   grid-template-columns: repeat(1, 1fr);
@@ -195,7 +199,6 @@ html > .footer {
   margin: 2rem 1rem;
   text-align: center;
 }
-
 
 @media screen and (min-width: 768px) {
   .careersHeading{ 
@@ -223,10 +226,12 @@ html > .footer {
   .grid3,
   .grid2,
   .grid5,
+  .grid6,
   .grid4,
   .grid10  {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid7,
   .btn-grid8 {
     grid-template-columns: repeat(3, auto);
   }
@@ -237,6 +242,8 @@ html > .footer {
   }
 }
 @media screen and (min-width: 1024px) {
+  
+  .grid7,
   .btn-grid8 {
     grid-template-columns: repeat(4, auto);
   }
@@ -249,6 +256,12 @@ html > .footer {
   }
   .grid5 {
     grid-template-columns: repeat(5, 1fr);
+  }
+  .grid6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .grid7 {
+    grid-template-columns: repeat(7, 1fr);
   }
   .grid10 {
     grid-template-columns: repeat(10, 1fr);
