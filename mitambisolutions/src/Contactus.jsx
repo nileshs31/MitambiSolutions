@@ -86,48 +86,47 @@ const Contactus = () => {
                     price. Contact Now!</p>
             </div>
 
-            <div className="contactForm">
-                <h2>Get In Touch!</h2>
-                <p>You can directly send us your queries and an expert will get back to you soon.</p>
-                <br />
-                <>{/* OLD CONTACT US FORM */}
-                <div className="contactForm2">
-
-                    <AlertSuccess />
-                    <AlertError />
-                    <div className="mb-3">
-                        <input type="text" className="form-control" id="name" onChange={event => setName(event.target.value)} placeholder="Your Name*" />
+            <div className="grid2">
+                <img src="images/banners/bulb.jpg" alt="" style={{ 'width': '100%','height':'100%', 'object-fit': 'cover' }} />
+                <div className="contactForm">
+                    <h2>Get In Touch!</h2>
+                    <p>You can directly send us your queries and an expert will get back to you soon.</p>
+                    <br />
+                    <>{/* OLD CONTACT US FORM */}
+                    <div className="contactForm2">
+                        <AlertSuccess />
+                        <AlertError />
+                        <div className="mb-3">
+                            <input type="text" className="form-control" id="name" onChange={event => setName(event.target.value)} placeholder="Your Name*" />
+                        </div>
+                        <div className="mb-3">
+                            <input type="email" className="form-control" id="email" onChange={event => setEmail(event.target.value)} placeholder="Your Email*" />
+                        </div>
+                        <div className="mb-3">
+                            <input type="text" className="form-control" id="num" onChange={event => setPhone(event.target.value)} placeholder="Your Phone Number*" />
+                        </div>
+                        <div className="mb-3">
+                            <input type="text" className="form-control" id="proj" onChange={event => setTitle(event.target.value)} placeholder="Name of Project*" />
+                        </div>
+                        <div className="mb-3">
+                            <textarea className="form-control" id="desc" onChange={event => setDescription(event.target.value)} rows="3" placeholder="Project Description*" ></textarea>
+                        </div>
+                        <div className="mb-3" style={{
+                            'text-align': 'center'
+                        }}>
+                
+                        </div>
+                        <div className="mb-3">
+                            <button onClick={() => {sendProposal({ Name, Email, Phone, Title, Description, DateTime }); }} className="btn btn-primary">Confirm</button>
+                        </div>
                     </div>
-                    <div className="mb-3">
-                        <input type="email" className="form-control" id="email" onChange={event => setEmail(event.target.value)} placeholder="Your Email*" />
-                    </div>
-                    <div className="mb-3">
-                        <input type="text" className="form-control" id="num" onChange={event => setPhone(event.target.value)} placeholder="Your Phone Number*" />
-                    </div>
-                    <div className="mb-3">
-                        <input type="text" className="form-control" id="proj" onChange={event => setTitle(event.target.value)} placeholder="Name of Project*" />
-                    </div>
-                    <div className="mb-3">
-                        <textarea className="form-control" id="desc" onChange={event => setDescription(event.target.value)} rows="3" placeholder="Project Description*" ></textarea>
-                    </div>
-                    <div className="mb-3" style={{
-                        'text-align': 'center'
-                    }}>
-                        
-                    </div>
-                    <div className="mb-3">
-                        <button onClick={() => {sendProposal({ Name, Email, Phone, Title, Description, DateTime }); }} className="btn btn-primary">Confirm</button>
-                    </div>
+                    </>
+                    {/* <div style={{ 'height': '300px' }}>
+                        <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfs41SmHbcP5zSRoIjWWPkQW2ydb9ljutRU2R5M4sHA2itqPA/viewform?embedded=true"
+                        width="100%" height="100%" frameborder="0">Loading…</iframe>
+                    </div> */}
                 </div>
-                </>
-
-                {/* <div style={{ 'height': '300px' }}>
-                    <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfs41SmHbcP5zSRoIjWWPkQW2ydb9ljutRU2R5M4sHA2itqPA/viewform?embedded=true"
-                    width="100%" height="100%" frameborder="0">Loading…</iframe>
-
-                </div> */}
-
             </div>
             <Footer/>       
         </div >
