@@ -19,7 +19,7 @@ const Careers = () => {
 
             <h3 style={{ 'text-align': 'center', 'margin': '3rem 1rem 1rem 1rem' }}>To join our next Batch, Fill the form below:</h3>
             <br />
-            <div style={{ 'height': '300px' }}>
+            <div style={{ 'height': '100vh' }}>
                     <iframe 
                     src="https://docs.google.com/forms/d/e/1FAIpQLSdXmjS1KUd6isn6w64Y083cAbGyPP41ZuYf3u3EaV3S0IUpPA/viewform?embedded=true"
                     width="100%" height="100%" frameborder="0">Loading…</iframe>
