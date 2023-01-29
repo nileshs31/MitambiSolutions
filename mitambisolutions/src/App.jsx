@@ -11,6 +11,8 @@ import Careers from './Careers';
 import Contactus from './Contactus';
 import Error from './Error';
 
+import Privacypolicy  from './Privacypolicy';
+
 import Learn from './Learn';
 import Marketing from './Marketing';
 
@@ -32,6 +34,7 @@ function App() {
         <Route exact path="/learn" component={Learn} />
         <Route exact path="/contactus" component={Contactus} />
         <Route exact path="/marketing" component={Marketing} />
+        <Route exact path="/privacypolicy" component={Privacypolicy} />
         <Route component={Error} />
       </Switch>
       
